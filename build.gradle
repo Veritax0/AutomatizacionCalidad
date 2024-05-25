@@ -1,8 +1,5 @@
 buildscript {
     repositories {
-        maven {
-            url "https://artifactory.apps.bancolombia.com/maven-bancolombia/"
-        }
         mavenLocal()
         mavenCentral()
     }
@@ -47,12 +44,9 @@ dependencies {
     testImplementation "org.hamcrest:hamcrest-all:$rootProject.ext.hamcrest"
     testImplementation("io.github.bonigarcia:webdrivermanager:5.4.1")
 
-//Lombok dependencies
-    compileOnly "org.projectlombok:lombok:${lombokVersion}"
-    annotationProcessor  "org.projectlombok:lombok:${lombokVersion}"
-    testCompileOnly  "org.projectlombok:lombok:${lombokVersion}"
-
     //Additional library
+    testImplementation group: 'io.cucumber', name: 'cucumber-java', version: '7.15.0'
+    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '7.15.0'
     //End Additional library
 
 }
