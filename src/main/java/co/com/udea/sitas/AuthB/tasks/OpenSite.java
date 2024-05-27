@@ -10,15 +10,16 @@ public class OpenSite implements Task {
 
     private PageObject page;
 
-    public OpenSite(PageObject page){
+    public OpenSite(PageObject page) {
         this.page = page;
     }
+
+    public static OpenSite page(PageObject page) {
+        return Tasks.instrumented(OpenSite.class, page);
+    }
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(Open.browserOn(this.page));
-    }
-
-    public static OpenSite page(PageObject page){
-        return Tasks.instrumented(OpenSite.class, page);
     }
 }
