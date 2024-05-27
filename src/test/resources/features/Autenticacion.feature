@@ -18,8 +18,8 @@
     When ingreso nombre de usuario y contrasena invalidos
     Then deberia ver un mensaje de error indicando credenciales invalidas
 
-  Scenario: Intentos de inicio de sesión excedidos
-    Given que he intentado iniciar sesión sin exito tres veces
+  Scenario: Intentos de inicio de sesion excedidos
+    Given que he intentado iniciar sesion sin exito tres veces
     When intento iniciar sesion por cuarta vez con credenciales invalidas
     Then deberia ver un mensaje de error indicando que he excedido el limite de intentos
     And deberia recibir un correo para confirmar mi identidad

@@ -32,8 +32,8 @@ public class AutenticacionIntentosExcedidos {
         setTheStage(new OnlineCast());
     }
 
-    @Given("que he intentado iniciar sesión sin exito tres veces")
-    public void queHeIntentadoIniciarSesiónSinExitoTresVeces() {
+    @Given("que he intentado iniciar sesion sin exito tres veces")
+    public void queHeIntentadoIniciarSesionSinExitoTresVeces() {
     }
 
     @When("intento iniciar sesion por cuarta vez con credenciales invalidas")
