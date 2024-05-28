@@ -1,5 +1,7 @@
 package co.com.udea.sitas.AuthB.stepdefinitions;
 
+import co.com.udea.sitas.AuthB.tasks.OpenSite;
+import co.com.udea.sitas.AuthB.userinterfaces.LoginPage;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -33,6 +35,7 @@ public class RegistroStepDefinition {
 
     @Given("que el usuario desea registrarse en el sistema de la aerolinea")
     public void queElUsuarioDeseaRegistrarseEnElSistemaDeLaAerolinea() {
+        usuario.attemptsTo(OpenSite.page(new LoginPage()));
     }
 
     @And("se encuentra en la pagina de registro")

@@ -1,1 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Registro de usuario" skipped="0" tests="3" time="0.38" timestamp="2024-05-27 03:02:53"><testcase name="registrar usuario con informacion valida"/><testcase name="registrar usuario con informacion invalida"/><testcase name="registrar usuario con una cuenta de google"/></testsuite>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="2" name="Registro de usuario" skipped="0" tests="3" time="0.25" timestamp="2024-05-27 09:19:32"><testcase name="registrar usuario con informacion valida"><failure message="Invalid URL: " type="java.lang.AssertionError">Invalid URL: </failure><system-err>Invalid URL: &#13;
+co.com.udea.sitas.AuthB.userinterfaces.LoginPage.&lt;init&gt;(LoginPage.java:14)&#13;
+co.com.udea.sitas.AuthB.stepdefinitions.RegistroStepDefinition.queElUsuarioDeseaRegistrarseEnElSistemaDeLaAerolinea(RegistroStepDefinition.java:38)&#13;
+✽.que el usuario desea registrarse en el sistema de la aerolinea(file:///C:/Users/Juan%20Manuel%20Vera/Documents/borrar/temporal/src/test/resources/features/Registro.feature:7)&#13;
+</system-err></testcase><testcase name="registrar usuario con informacion invalida"><failure message="Invalid URL: " type="java.lang.AssertionError">Invalid URL: </failure><system-err>Invalid URL: &#13;
+co.com.udea.sitas.AuthB.userinterfaces.LoginPage.&lt;init&gt;(LoginPage.java:14)&#13;
+co.com.udea.sitas.AuthB.stepdefinitions.RegistroStepDefinition.queElUsuarioDeseaRegistrarseEnElSistemaDeLaAerolinea(RegistroStepDefinition.java:38)&#13;
+✽.que el usuario desea registrarse en el sistema de la aerolinea(file:///C:/Users/Juan%20Manuel%20Vera/Documents/borrar/temporal/src/test/resources/features/Registro.feature:13)&#13;
+</system-err></testcase><testcase name="registrar usuario con una cuenta de google"/></testsuite>

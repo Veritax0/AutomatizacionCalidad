@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Registro de usuario" skipped="0" tests="3" time="3.76" timestamp="2024-05-27 09:15:55"><testcase name="registrar usuario con informacion valida"/><testcase name="registrar usuario con informacion invalida"/><testcase name="registrar usuario con una cuenta de google"/></testsuite>

@@ -18,6 +18,7 @@ public class OpenSite implements Task {
         return Tasks.instrumented(OpenSite.class, page);
     }
 
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(Open.browserOn(this.page));

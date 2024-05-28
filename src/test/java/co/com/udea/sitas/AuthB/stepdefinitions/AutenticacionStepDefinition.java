@@ -1,8 +1,10 @@
 package co.com.udea.sitas.AuthB.stepdefinitions;
 
+import co.com.udea.sitas.AuthB.questions.HomePageValidation;
+import co.com.udea.sitas.AuthB.tasks.FillLogin;
 import co.com.udea.sitas.AuthB.tasks.OpenSite;
-import co.com.udea.sitas.AuthB.userinterfaces.HomePage;
 import co.com.udea.sitas.AuthB.userinterfaces.LoginPage;
+import co.com.udea.sitas.AuthB.utils.StringConst;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -11,8 +13,10 @@ import io.cucumber.java.en.When;
 import io.cucumber.junit.Cucumber;
 import net.serenitybdd.annotations.Managed;
 import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+import org.hamcrest.Matchers;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
@@ -41,10 +45,12 @@ public class AutenticacionStepDefinition {
 
     @When("ingreso nombre de usuario y contrasena validos")
     public void ingresoNombreDeUsuarioYContrasenaValidos() {
+        usuario.attemptsTo((FillLogin.fillLogin()));
     }
 
     @Then("deberia ver la pagina de bienvenida")
     public void deberiaVerLaPaginaDeBienvenida() {
+        GivenWhenThen.then(usuario).should(GivenWhenThen.seeThat(HomePageValidation.homePage(), Matchers.containsString(StringConst.VAL_HOME_PAGE)));
     }
 
     @Given("que el usuario prefiere usar una cuenta externa para autenticarse")

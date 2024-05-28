@@ -1,1 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Autenticación de usuarios" skipped="0" tests="4" time="0.57" timestamp="2024-05-27 02:34:06"><testcase name="Iniciar sesion con credenciales validas"/><testcase name="Iniciar sesion mediante servicios de terceros"/><testcase name="Iniciar sesion con credenciales invalidas"/><testcase name="Intentos de inicio de sesion excedidos"/></testsuite>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="2" name="Autenticación de usuarios" skipped="0" tests="4" time="0.68" timestamp="2024-05-27 09:23:39"><testcase name="Iniciar sesion con credenciales validas"><failure message="Invalid URL: " type="java.lang.AssertionError">Invalid URL: </failure><system-err>Invalid URL: &#13;
+co.com.udea.sitas.AuthB.userinterfaces.LoginPage.&lt;init&gt;(LoginPage.java:14)&#13;
+co.com.udea.sitas.AuthB.stepdefinitions.AutenticacionStepDefinition.queEstoyEnLaPaginaDeInicioDeSesion(AutenticacionStepDefinition.java:39)&#13;
+✽.que estoy en la pagina de inicio de sesion(file:///C:/Users/Juan%20Manuel%20Vera/Documents/borrar/temporal/src/test/resources/features/Autenticacion.feature:7)&#13;
+</system-err></testcase><testcase name="Iniciar sesion mediante servicios de terceros"/><testcase name="Iniciar sesion con credenciales invalidas"><failure message="Invalid URL: " type="java.lang.AssertionError">Invalid URL: </failure><system-err>Invalid URL: &#13;
+co.com.udea.sitas.AuthB.userinterfaces.LoginPage.&lt;init&gt;(LoginPage.java:14)&#13;
+co.com.udea.sitas.AuthB.stepdefinitions.AutenticacionStepDefinition.queEstoyEnLaPaginaDeInicioDeSesion(AutenticacionStepDefinition.java:39)&#13;
+✽.que estoy en la pagina de inicio de sesion(file:///C:/Users/Juan%20Manuel%20Vera/Documents/borrar/temporal/src/test/resources/features/Autenticacion.feature:17)&#13;
+</system-err></testcase><testcase name="Intentos de inicio de sesion excedidos"/></testsuite>
