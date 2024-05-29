@@ -28,6 +28,8 @@ public class SignInPage extends PageObject {
     public static final Target CONTRASENA = Target.the("Contrasena").located(By.id("contrasena"));
     public static final Target CONFIRMAR_CONTRASENA = Target.the("Confirmar contrasena").located(By.id("confirmar-contrasena"));
     public static final Target BOTON_REGISTRARME = Target.the("Boton Registrarme").located(By.id("boton-registrarme"));
+    public static final Target GOOGLE_BUTTON = Target.the("Boton de registro terceros").located(By.id("boton-google"));
+    public static final Target GOOGLE_ACCOUNT = Target.the("Cuenta de google").located(By.name("MBVUVe"));
 
     public SignInPage() {
         this.setDefaultBaseUrl(UrlConstante.URL_SIGNIN);

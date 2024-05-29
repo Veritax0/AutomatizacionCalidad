@@ -1,10 +1,10 @@
 package co.com.udea.sitas.AuthB.stepdefinitions;
 
-import co.com.udea.sitas.AuthB.tasks.FillLogin;
-import co.com.udea.sitas.AuthB.tasks.FillSignIn;
-import co.com.udea.sitas.AuthB.tasks.OpenSite;
+import co.com.udea.sitas.AuthB.questions.HomePageValidation;
+import co.com.udea.sitas.AuthB.tasks.*;
 import co.com.udea.sitas.AuthB.userinterfaces.LoginPage;
 import co.com.udea.sitas.AuthB.userinterfaces.SignInPage;
+import co.com.udea.sitas.AuthB.utils.StringConst;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -13,8 +13,10 @@ import io.cucumber.java.en.When;
 import io.cucumber.junit.Cucumber;
 import net.serenitybdd.annotations.Managed;
 import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+import org.hamcrest.Matchers;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
@@ -53,21 +55,26 @@ public class RegistroStepDefinition {
 
     @Then("el sistema indica que el usuario ha sido creado")
     public void elSistemaIndicaQueElUsuarioHaSidoCreado() {
+        GivenWhenThen.then(usuario).should(GivenWhenThen.seeThat(HomePageValidation.homePage(), Matchers.containsString(StringConst.VALID_REGISTER)));
     }
 
     @When("ingresa informacion invalida al crear la cuenta")
     public void ingresaInformacionInvalidaAlCrearLaCuenta() {
+        usuario.attemptsTo(InvalidFillSignIn.fillSignIn());
     }
 
     @Then("el sistema indica que ha habido un error en los datos ingresados")
     public void elSistemaIndicaQueHaHabidoUnErrorEnLosDatosIngresados() {
+        GivenWhenThen.then(usuario).should(GivenWhenThen.seeThat(HomePageValidation.homePage(), Matchers.containsString(StringConst.INVALID_REGISTER)));
     }
 
     @Given("que el usuario desea registrarse en el sistema de la aerolinea con una cuenta de google")
     public void queElUsuarioDeseaRegistrarseEnElSistemaDeLaAerolineaConUnaCuentaDeGoogle() {
+        //usuario.attemptsTo(OpenSite.page(new SignInPage()));
     }
 
     @When("selecciona registrarse con su cuenta de google")
     public void seleccionaRegistrarseConSuCuentaDeGoogle() {
+        usuario.attemptsTo(GoogleSignIn.googleSing());
     }
 }
