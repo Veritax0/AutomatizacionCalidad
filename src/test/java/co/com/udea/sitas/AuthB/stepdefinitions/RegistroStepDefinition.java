@@ -1,7 +1,10 @@
 package co.com.udea.sitas.AuthB.stepdefinitions;
 
+import co.com.udea.sitas.AuthB.tasks.FillLogin;
+import co.com.udea.sitas.AuthB.tasks.FillSignIn;
 import co.com.udea.sitas.AuthB.tasks.OpenSite;
 import co.com.udea.sitas.AuthB.userinterfaces.LoginPage;
+import co.com.udea.sitas.AuthB.userinterfaces.SignInPage;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -35,15 +38,17 @@ public class RegistroStepDefinition {
 
     @Given("que el usuario desea registrarse en el sistema de la aerolinea")
     public void queElUsuarioDeseaRegistrarseEnElSistemaDeLaAerolinea() {
-        usuario.attemptsTo(OpenSite.page(new LoginPage()));
+        //usuario.attemptsTo(OpenSite.page(new SignInPage()));
     }
 
     @And("se encuentra en la pagina de registro")
     public void seEncuentraEnLaPaginaDeRegistro() {
+        usuario.attemptsTo(OpenSite.page(new SignInPage()));
     }
 
     @When("ingresa su informacion al crear la cuenta")
     public void ingresaSuInformacionAlCrearLaCuenta() {
+        usuario.attemptsTo(FillSignIn.fillSignIn());
     }
 
     @Then("el sistema indica que el usuario ha sido creado")
