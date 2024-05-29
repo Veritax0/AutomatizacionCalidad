@@ -27,7 +27,7 @@ public class SignInPage extends PageObject {
     public static final Target CORREO_ELECTRONICO = Target.the("Correo electronico").located(By.id("correo-electronico"));
     public static final Target CONTRASENA = Target.the("Contrasena").located(By.id("contrasena"));
     public static final Target CONFIRMAR_CONTRASENA = Target.the("Confirmar contrasena").located(By.id("confirmar-contrasena"));
-    public static final Target BOTON_REGISTRARME = Target.the("Boton Registrarme").located(By.id("registrarme"));
+    public static final Target BOTON_REGISTRARME = Target.the("Boton Registrarme").located(By.id("boton-registrarme"));
 
     public SignInPage() {
         this.setDefaultBaseUrl(UrlConstante.URL_SIGNIN);

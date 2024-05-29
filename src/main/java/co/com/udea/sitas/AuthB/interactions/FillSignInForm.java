@@ -5,6 +5,7 @@ import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.actions.type.Type;
 
 import static co.com.udea.sitas.AuthB.userinterfaces.LoginPage.*;
 import static co.com.udea.sitas.AuthB.userinterfaces.SignInPage.*;
@@ -22,7 +23,7 @@ public class FillSignInForm implements Interaction {
                 Click.on(GENERO),
                 Click.on(GENERO_MASCULINO),
                 Click.on(FECHA),
-                Enter.theValue("01012000").into(FECHA),
+                Type.theValue("01012000").into(FECHA),
                 Enter.theValue("1234567890").into(NUMERO_TELEFONO),
                 Enter.theValue("Argentina").into(PAIS),
                 Enter.theValue("Buenos Aires").into(PROVINCIA),
