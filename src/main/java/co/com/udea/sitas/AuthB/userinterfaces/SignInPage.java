@@ -30,6 +30,7 @@ public class SignInPage extends PageObject {
     public static final Target BOTON_REGISTRARME = Target.the("Boton Registrarme").located(By.id("boton-registrarme"));
     public static final Target GOOGLE_BUTTON = Target.the("Boton de registro terceros").located(By.id("boton-google"));
     public static final Target GOOGLE_ACCOUNT = Target.the("Cuenta de google").located(By.name("MBVUVe"));
+    public static final Target FORM_HELPER = Target.the("Cuenta de google").located(By.name("correo-electronico-helper-text"));
 
     public SignInPage() {
         this.setDefaultBaseUrl(UrlConstante.URL_SIGNIN);

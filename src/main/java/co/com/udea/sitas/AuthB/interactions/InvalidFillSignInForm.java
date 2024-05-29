@@ -28,10 +28,9 @@ public class InvalidFillSignInForm implements Interaction {
                 Enter.theValue("Antiokia").into(PROVINCIA),
                 Enter.theValue("Medeyin").into(CIUDAD),
                 Enter.theValue("Calle Falsa 123").into(DIRECCION),
-                Enter.theValue("juan.perez@example.com").into(CORREO_ELECTRONICO),
+                Enter.theValue("juan.perez").into(CORREO_ELECTRONICO),
                 Enter.theValue("@Password123").into(CONTRASENA),
-                Enter.theValue("@Password123").into(CONFIRMAR_CONTRASENA),
-                Click.on(BOTON_REGISTRARME)
+                Enter.theValue("@Pass").into(CONFIRMAR_CONTRASENA)
         );
     }
 

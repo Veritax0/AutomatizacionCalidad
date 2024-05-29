@@ -1,8 +1,8 @@
 package co.com.udea.sitas.AuthB.stepdefinitions;
 
-import co.com.udea.sitas.AuthB.questions.HomePageValidation;
+import co.com.udea.sitas.AuthB.questions.AlertValidation;
+import co.com.udea.sitas.AuthB.questions.InvalidDataValidation;
 import co.com.udea.sitas.AuthB.tasks.*;
-import co.com.udea.sitas.AuthB.userinterfaces.LoginPage;
 import co.com.udea.sitas.AuthB.userinterfaces.SignInPage;
 import co.com.udea.sitas.AuthB.utils.StringConst;
 import io.cucumber.java.Before;
@@ -55,7 +55,7 @@ public class RegistroStepDefinition {
 
     @Then("el sistema indica que el usuario ha sido creado")
     public void elSistemaIndicaQueElUsuarioHaSidoCreado() {
-        GivenWhenThen.then(usuario).should(GivenWhenThen.seeThat(HomePageValidation.homePage(), Matchers.containsString(StringConst.VALID_REGISTER)));
+        GivenWhenThen.then(usuario).should(GivenWhenThen.seeThat(AlertValidation.homePage(), Matchers.containsString(StringConst.VALID_REGISTER)));
     }
 
     @When("ingresa informacion invalida al crear la cuenta")
@@ -65,7 +65,7 @@ public class RegistroStepDefinition {
 
     @Then("el sistema indica que ha habido un error en los datos ingresados")
     public void elSistemaIndicaQueHaHabidoUnErrorEnLosDatosIngresados() {
-        GivenWhenThen.then(usuario).should(GivenWhenThen.seeThat(HomePageValidation.homePage(), Matchers.containsString(StringConst.INVALID_REGISTER)));
+        GivenWhenThen.then(usuario).should(GivenWhenThen.seeThat(InvalidDataValidation.homePage(), Matchers.containsString(StringConst.INVALID_REGISTER)));
     }
 
     @Given("que el usuario desea registrarse en el sistema de la aerolinea con una cuenta de google")

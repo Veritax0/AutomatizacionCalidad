@@ -1,7 +1,6 @@
 package co.com.udea.sitas.AuthB.tasks;
 
 import co.com.udea.sitas.AuthB.interactions.FillSignInForm;
-import co.com.udea.sitas.AuthB.interactions.InputFill;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
