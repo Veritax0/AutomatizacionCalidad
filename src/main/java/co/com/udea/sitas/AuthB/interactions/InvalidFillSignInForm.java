@@ -16,7 +16,7 @@ public class InvalidFillSignInForm implements Interaction {
         actor.attemptsTo(
                 Click.on(IDENTIFICACION),
                 Click.on(IDENTIFICACION_CEDULA),
-                Enter.theValue("adfasd").into(NUMERO_DOCUMENTO),
+                Enter.theValue("1000416823").into(NUMERO_DOCUMENTO),
                 Enter.theValue("Juan").into(NOMBRE),
                 Enter.theValue("Perez").into(APELLIDO),
                 Click.on(GENERO),
