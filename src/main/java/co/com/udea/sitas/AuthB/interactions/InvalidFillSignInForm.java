@@ -22,7 +22,7 @@ public class InvalidFillSignInForm implements Interaction {
                 Click.on(GENERO),
                 Click.on(GENERO_MASCULINO),
                 Click.on(FECHA),
-                Type.theValue("01012000").into(FECHA),
+                Type.theValue("01012020").into(FECHA),
                 Enter.theValue("telefono").into(NUMERO_TELEFONO),
                 Enter.theValue("Columbia").into(PAIS),
                 Enter.theValue("Antiokia").into(PROVINCIA),

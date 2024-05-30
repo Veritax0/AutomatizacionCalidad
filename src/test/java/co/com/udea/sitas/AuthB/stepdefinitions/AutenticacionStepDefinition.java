@@ -95,7 +95,7 @@ public class AutenticacionStepDefinition {
         GivenWhenThen.then(usuario).should(GivenWhenThen.seeThat(ManyAttempsValidation.homePage(), Matchers.containsString(StringConst.MANY_ATTEMPTS_INVALID_LOGIN)));
     }
 
-    @And("deberia recibir un correo para confirmar mi identidad")
+    @Then("deberia recibir un correo para confirmar mi identidad")
     public void deberiaRecibirUnCorreoParaConfirmarMiIdentidad() {
     }
 }
